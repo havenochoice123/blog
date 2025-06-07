@@ -59,3 +59,20 @@ del{color:#777}
 .task-list-item {
   list-style-type: none !important;
 }
+/* 强制去除任务列表前的圆点和缩进 */
+.task-list-item {
+  list-style-type: none !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+.task-list-item input[type="checkbox"] {
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+/* 针对嵌套在 .article-entry 下的任务列表 */
+.article-entry ul.task-list,
+.article-entry ol.task-list {
+  list-style: none !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
