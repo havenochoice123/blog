@@ -76,3 +76,11 @@ del{color:#777}
   margin-left: 0 !important;
   padding-left: 0 !important;
 }
+/* 彻底去除任务列表前的圆点 */
+.article-entry ul.task-list li,
+.article-entry ol.task-list li,
+.article-entry li.task-list-item {
+  list-style: none !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
