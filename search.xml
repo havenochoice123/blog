@@ -29,7 +29,7 @@
       <link href="/2025/07/22/%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
       <url>/2025/07/22/%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
       
-        <content type="html"><![CDATA[<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h3 id="位移运算符"><a href="#位移运算符" class="headerlink" title="位移运算符"></a>位移运算符</h3><p>分为左移和右移运算符</p><p>但是右移多了一个<strong>考虑符号位的右移（逻辑右移）</strong>，即：”&gt;&gt;&gt;”</p><p>正常的右移是左面补齐符号位，但&lt;&lt;&lt;则是连同符号位一起右移，左边补0</p><h3 id="优先级顺序"><a href="#优先级顺序" class="headerlink" title="优先级顺序"></a>优先级顺序</h3><p>![](themes&#x2F;hexo-theme-matery&#x2F;source&#x2F;medias&#x2F;useful&#x2F;屏幕截图 2025-07-23 162425.png)</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h3 id="位移运算符"><a href="#位移运算符" class="headerlink" title="位移运算符"></a>位移运算符</h3><p>分为左移和右移运算符</p><p>但是右移多了一个<strong>考虑符号位的右移（逻辑右移）</strong>，即：”&gt;&gt;&gt;”</p><p>正常的右移是左面补齐符号位，但&lt;&lt;&lt;则是连同符号位一起右移，左边补0</p><h3 id="优先级顺序"><a href="#优先级顺序" class="headerlink" title="优先级顺序"></a>优先级顺序</h3><p>![](&#x2F;themes&#x2F;hexo-theme-matery&#x2F;source&#x2F;medias&#x2F;useful&#x2F;屏幕截图 2025-07-23 162425.png)</p>]]></content>
       
       
       
