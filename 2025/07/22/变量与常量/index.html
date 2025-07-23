@@ -6,15 +6,14 @@
     <meta charset="utf-8">
     <meta name="keywords" content="变量与常量, blog">
     <meta name="description" content="变量与常量final关键字可以定义变量为常量，使其只能被赋值一次（类似于static）
-final int a = 10;
+1final int a = 10;
 
 整数类型
 byte 字节型（1个字节）：-128~127
 
 short 短整型（2个字节）
 
-int（4个字节）
-">
+int（4个字节）">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -59,8 +58,8 @@ int（4个字节）
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-    <link rel="stylesheet" href="/libs/prism/prism.min.css">
-    <script src="/libs/prism/prism.min.js"></script>
+    <link rel="stylesheet" href="/libs/prism/prism.css">
+    <script src="/libs/prism/prism.js"></script>
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 
@@ -437,7 +436,7 @@ int（4个字节）
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="变量与常量"><a href="#变量与常量" class="headerlink" title="变量与常量"></a>变量与常量</h1><h2 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h2><p>可以定义变量为常量，使其只能被赋值一次（类似于static）</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
 
 <h3 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h3><ul>
 <li><p>byte 字节型（1个字节）：-128~127</p>
@@ -448,15 +447,15 @@ int（4个字节）
 </li>
 <li><p>long （8个字节）</p>
 <p>  定义long类型常量时，要在数字后面加L</p>
-  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">long</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">18231723932L</span>;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">18231723932L</span>;</span><br></pre></td></tr></table></figure>
 <p>  同时，针对这种很长的数字，可以用下划线分割每一位</p>
-  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">long</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">182_2313_312_31L</span>;</span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">182_2313_312_31L</span>;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <p>八进制表示：前面加0</p>
 <p>十六进制表示：前面加0x</p>
 <h3 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h3><ul>
 <li><p>float</p>
-  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">float</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">1.5F</span>;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">float</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">1.5F</span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>double</p>
 </li>
@@ -468,13 +467,13 @@ int（4个字节）
 <h3 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h3><ul>
 <li>boolean</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">boolean</span> <span class="variable">a</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">boolean</span> <span class="variable">a</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
 
 <h3 id="局部变量类型推断（Java10）"><a href="#局部变量类型推断（Java10）" class="headerlink" title="局部变量类型推断（Java10）"></a>局部变量类型推断（Java10）</h3><ul>
 <li>var</li>
 </ul>
 <p>可以根据上下文自动推断数据类型（但是用的比较少）</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">var</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">sout(a);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">var</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">sout(a);</span><br></pre></td></tr></table></figure>
                 
             </div>
             <hr/>
