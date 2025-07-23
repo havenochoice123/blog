@@ -54,7 +54,9 @@ char ">
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 7.3.0"></head>
+<meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
 
 
 <body>
@@ -399,7 +401,7 @@ char ">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    852
+                    853
                 </div>
                 
 
@@ -433,80 +435,80 @@ char ">
 <p>switch的分支结果可以直接作为返回结果给到前面的变量，或是在后续课程中用做方法返回值使用：</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> score <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">;</span>
 <span class="token comment">//直接让res接收switch的结果</span>
-<span class="token keyword">char</span> res <span class="token operator">=</span> <span class="token keyword">switch</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-	<span class="token keyword">case</span> <span class="token number">10</span><span class="token punctuation">,</span><span class="token number">9</span> <span class="token operator">-></span> <span class="token char">'A'</span><span class="token punctuation">;</span>
-	<span class="token keyword">case</span> <span class="token number">8</span> <span class="token operator">-></span> <span class="token char">'B'</span><span class="token punctuation">;</span>
-	<span class="token keyword">case</span> <span class="token number">7</span><span class="token punctuation">,</span><span class="token number">6</span> <span class="token operator">-></span> <span class="token char">'C'</span><span class="token punctuation">;</span>
-	<span class="token keyword">default</span> <span class="token operator">-></span> <span class="token char">'D'</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>       <span class="token comment">//注意这是一个赋值语句，后面要加分号</span>
+<span class="token keyword">char</span> res <span class="token operator">=</span> <span class="token keyword">switch</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">case</span> <span class="token number">10</span><span class="token punctuation">,</span><span class="token number">9</span> <span class="token operator">-&gt;</span> <span class="token char">'A'</span><span class="token punctuation">;</span>
+	<span class="token keyword">case</span> <span class="token number">8</span> <span class="token operator">-&gt;</span> <span class="token char">'B'</span><span class="token punctuation">;</span>
+	<span class="token keyword">case</span> <span class="token number">7</span><span class="token punctuation">,</span><span class="token number">6</span> <span class="token operator">-&gt;</span> <span class="token char">'C'</span><span class="token punctuation">;</span>
+	<span class="token keyword">default</span> <span class="token operator">-&gt;</span> <span class="token char">'D'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>       <span class="token comment">//注意这是一个赋值语句，后面要加分号</span>
 <span class="token function">sout</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>即switch有了返回值，变量需要接收，switch语句中的冒号，break等也不在了，取而代之的是箭头。</p>
 <p>当然，如果除了返回值外，还需要执行别的操作，可以写成代码块的形式，此时要用到关键字 <code>yield</code>,表示延迟返回：</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> score <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">;</span>
-<span class="token keyword">char</span> res <span class="token operator">=</span> <span class="token keyword">switch</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-	<span class="token keyword">case</span> <span class="token number">10</span><span class="token punctuation">,</span><span class="token number">9</span> <span class="token operator">-></span> <span class="token char">'A'</span><span class="token punctuation">;</span>
-	<span class="token keyword">case</span> <span class="token number">8</span> <span class="token operator">-></span> <span class="token char">'B'</span><span class="token punctuation">;</span>
-	<span class="token keyword">case</span> <span class="token number">7</span><span class="token punctuation">,</span><span class="token number">6</span> <span class="token operator">-></span> <span class="token char">'C'</span><span class="token punctuation">;</span>
-	<span class="token keyword">default</span> <span class="token operator">-></span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">char</span> res <span class="token operator">=</span> <span class="token keyword">switch</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">case</span> <span class="token number">10</span><span class="token punctuation">,</span><span class="token number">9</span> <span class="token operator">-&gt;</span> <span class="token char">'A'</span><span class="token punctuation">;</span>
+	<span class="token keyword">case</span> <span class="token number">8</span> <span class="token operator">-&gt;</span> <span class="token char">'B'</span><span class="token punctuation">;</span>
+	<span class="token keyword">case</span> <span class="token number">7</span><span class="token punctuation">,</span><span class="token number">6</span> <span class="token operator">-&gt;</span> <span class="token char">'C'</span><span class="token punctuation">;</span>
+	<span class="token keyword">default</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
 		<span class="token function">sout</span><span class="token punctuation">(</span><span class="token string">"不及格"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 		<span class="token keyword">yield</span> <span class="token char">'D'</span><span class="token punctuation">;</span>   <span class="token comment">//指定延迟返回的结果，并自动结束分支</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token function">sout</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="switch模式匹配（Java21后）"><a href="#switch模式匹配（Java21后）" class="headerlink" title="switch模式匹配（Java21后）"></a>switch模式匹配（Java21后）</h2><p>即switch除了可以根据变量的不同值做出判断外，增加了一个新功能：<strong>判断变量类型（只能是引用类型，Java25之后可以是基本类型）</strong></p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">tellInstance</span><span class="token punctuation">(</span><span class="token class-name">Object</span> obj<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-       <span class="token class-name">String</span> type <span class="token operator">=</span> <span class="token keyword">switch</span> <span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-          <span class="token keyword">case</span> <span class="token class-name">Integer</span> i <span class="token operator">-></span> <span class="token string">"Integer"</span><span class="token punctuation">;</span>   <span class="token comment">//i和s为定义的返回值的变量名</span>
-          <span class="token keyword">case</span> <span class="token class-name">String</span> s <span class="token operator">-></span> <span class="token string">"String"</span><span class="token punctuation">;</span>
-          <span class="token keyword">case</span> <span class="token keyword">null</span> <span class="token operator">-></span> <span class="token string">"Null"</span><span class="token punctuation">;</span>  <span class="token comment">//null和default直接加箭头</span>
-          <span class="token keyword">default</span> <span class="token operator">-></span> <span class="token string">"Other"</span><span class="token punctuation">;</span>        
-       <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>  <span class="token comment">//记得每个语句和最后加分号</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">tellInstance</span><span class="token punctuation">(</span><span class="token class-name">Object</span> obj<span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token class-name">String</span> type <span class="token operator">=</span> <span class="token keyword">switch</span> <span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">{</span>
+          <span class="token keyword">case</span> <span class="token class-name">Integer</span> i <span class="token operator">-&gt;</span> <span class="token string">"Integer"</span><span class="token punctuation">;</span>   <span class="token comment">//i和s为定义的返回值的变量名</span>
+          <span class="token keyword">case</span> <span class="token class-name">String</span> s <span class="token operator">-&gt;</span> <span class="token string">"String"</span><span class="token punctuation">;</span>
+          <span class="token keyword">case</span> <span class="token keyword">null</span> <span class="token operator">-&gt;</span> <span class="token string">"Null"</span><span class="token punctuation">;</span>  <span class="token comment">//null和default直接加箭头</span>
+          <span class="token keyword">default</span> <span class="token operator">-&gt;</span> <span class="token string">"Other"</span><span class="token punctuation">;</span>        
+       <span class="token punctuation">}</span><span class="token punctuation">;</span>  <span class="token comment">//记得每个语句和最后加分号</span>
       <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
-   <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>我们注意到，模式匹配中的类型后面必须跟一个变量名字，能否有一种办法省略掉呢？在Java 22之后，我们可以使用<code>_</code>下划线来直接取代，表示这是一个后续不会使用的未命名的变量</p>
 <p>如果除了判断类型，我们还想判断别的，可以使用 <code>when</code> 关键字，在后面加上想要额外判断的条件进行额外条件检查，这种操作称为”守卫条件”</p>
 <p><code>when</code>后面需要填写判断条件，和<code>if</code>一样，必须为一个返回值为<code>boolean</code>的表达式，也可以使用与或非操作</p>
 <p>这样，在switch中也可以实现<strong>区间判断</strong>：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">tellGrade</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> score<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-      <span class="token class-name">String</span> type <span class="token operator">=</span> <span class="token keyword">switch</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-         <span class="token keyword">case</span> <span class="token class-name">Integer</span> i when score <span class="token operator">>=</span> <span class="token number">90</span> <span class="token operator">-></span> <span class="token string">"A"</span><span class="token punctuation">;</span>
-         <span class="token keyword">case</span> <span class="token class-name">Integer</span> i when score <span class="token operator">>=</span> <span class="token number">80</span> <span class="token operator">-></span> <span class="token string">"B"</span><span class="token punctuation">;</span>
-         <span class="token keyword">case</span> <span class="token class-name">Integer</span> i when score <span class="token operator">>=</span> <span class="token number">60</span> <span class="token operator">-></span> <span class="token string">"C"</span><span class="token punctuation">;</span>
-         <span class="token keyword">default</span> <span class="token operator">-></span> <span class="token string">"D"</span><span class="token punctuation">;</span>
-      <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">tellGrade</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> score<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token class-name">String</span> type <span class="token operator">=</span> <span class="token keyword">switch</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token keyword">case</span> <span class="token class-name">Integer</span> i when score <span class="token operator">&gt;=</span> <span class="token number">90</span> <span class="token operator">-&gt;</span> <span class="token string">"A"</span><span class="token punctuation">;</span>
+         <span class="token keyword">case</span> <span class="token class-name">Integer</span> i when score <span class="token operator">&gt;=</span> <span class="token number">80</span> <span class="token operator">-&gt;</span> <span class="token string">"B"</span><span class="token punctuation">;</span>
+         <span class="token keyword">case</span> <span class="token class-name">Integer</span> i when score <span class="token operator">&gt;=</span> <span class="token number">60</span> <span class="token operator">-&gt;</span> <span class="token string">"C"</span><span class="token punctuation">;</span>
+         <span class="token keyword">default</span> <span class="token operator">-&gt;</span> <span class="token string">"D"</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
       <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
-   <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="记录类型"><a href="#记录类型" class="headerlink" title="记录类型"></a>记录类型</h3><p>此外，针对于此前提到的记录类型，在<code>switch</code>语句中支持直接解构使用：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">record</span> <span class="token class-name">Point</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">record</span> <span class="token class-name">Point</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Integer</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token class-name">Object</span> object<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">return</span> <span class="token keyword">switch</span> <span class="token punctuation">(</span>object<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">case</span> <span class="token class-name">Point</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span> <span class="token operator">-></span> x <span class="token operator">+</span> y<span class="token punctuation">;</span>  <span class="token comment">//直接解构其参数使用</span>
-        <span class="token keyword">case</span> <span class="token class-name">String</span> _ <span class="token operator">-></span> <span class="token number">10</span><span class="token punctuation">;</span>
-        <span class="token keyword">default</span> <span class="token operator">-></span> <span class="token number">5</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Integer</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token class-name">Object</span> object<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">switch</span> <span class="token punctuation">(</span>object<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token class-name">Point</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> x <span class="token operator">+</span> y<span class="token punctuation">;</span>  <span class="token comment">//直接解构其参数使用</span>
+        <span class="token keyword">case</span> <span class="token class-name">String</span> _ <span class="token operator">-&gt;</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token keyword">default</span> <span class="token operator">-&gt;</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>这里针对于记录类型，类似重新写了一次类型声明，编写完整的类名加参数<code>Point(int x, int y)</code>表示当<code>object</code>如果是记录类型，则进入此分支且解构其内部成员变量，这里写的<code>x</code>和<code>y</code>作为结构出来的变量可以直接在后续使用。同样的，解构的变量如果后续不使用也可以直接使用下划线代替。</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">	<span class="token keyword">return</span> <span class="token keyword">switch</span> <span class="token punctuation">(</span>object<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">case</span> <span class="token class-name">Point</span><span class="token punctuation">(</span><span class="token keyword">int</span> _<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span> <span class="token operator">-></span> y<span class="token punctuation">;</span>
-    <span class="token keyword">case</span> <span class="token class-name">String</span> _ <span class="token operator">-></span> <span class="token number">10</span><span class="token punctuation">;</span>
-    <span class="token keyword">default</span> <span class="token operator">-></span> <span class="token number">5</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">	<span class="token keyword">return</span> <span class="token keyword">switch</span> <span class="token punctuation">(</span>object<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token class-name">Point</span><span class="token punctuation">(</span><span class="token keyword">int</span> _<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> y<span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token class-name">String</span> _ <span class="token operator">-&gt;</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">default</span> <span class="token operator">-&gt;</span> <span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><code>switch</code>还支持对记录类内部成员的类型嵌套匹配：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">record</span> <span class="token class-name">Container</span><span class="token punctuation">(</span><span class="token class-name">Object</span> data<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>  <span class="token comment">//这里data是Object类型的</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">record</span> <span class="token class-name">Container</span><span class="token punctuation">(</span><span class="token class-name">Object</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>  <span class="token comment">//这里data是Object类型的</span>
 
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Integer</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token class-name">Container</span> object<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">return</span> <span class="token keyword">switch</span> <span class="token punctuation">(</span>object<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">case</span> <span class="token class-name">Container</span><span class="token punctuation">(</span><span class="token class-name">String</span> str<span class="token punctuation">)</span> <span class="token operator">-></span> str<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//其内部类型如果是String</span>
-        <span class="token keyword">case</span> <span class="token class-name">Container</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> i<span class="token punctuation">)</span> <span class="token operator">-></span> i<span class="token punctuation">;</span>  <span class="token comment">//其内部类型如果是Integer</span>
-        <span class="token keyword">default</span> <span class="token operator">-></span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Integer</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token class-name">Container</span> object<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">switch</span> <span class="token punctuation">(</span>object<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token class-name">Container</span><span class="token punctuation">(</span><span class="token class-name">String</span> str<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> str<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//其内部类型如果是String</span>
+        <span class="token keyword">case</span> <span class="token class-name">Container</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> i<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> i<span class="token punctuation">;</span>  <span class="token comment">//其内部类型如果是Integer</span>
+        <span class="token keyword">default</span> <span class="token operator">-&gt;</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
