@@ -2294,3 +2294,9 @@ body.DarkMode .theme-btn:hover {
     font-weight: 900;
     color: #d9534f;
 }
+/* 取消首页和文章页的彩色背景蒙层 */
+.bg-cover:before,
+.bg-cover:after {
+    background: none !important;
+    animation: none !important;
+}
