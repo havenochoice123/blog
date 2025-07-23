@@ -421,6 +421,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
 
         
 
@@ -428,11 +431,11 @@
             <div id="articleContent">
                 <p>因为有C语言和C++的一点基础，所以Java中有相似的都不再列出，只做Java中一些不同的写法和新的内容  </p>
 <h2 id="打印"><a href="#打印" class="headerlink" title="打印"></a>打印</h2><p>打印代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">System.out.print();   <span class="hljs-comment">//不换行</span><br>System.out.println(); <span class="hljs-comment">//换行</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.print();   <span class="comment">//不换行</span></span><br><span class="line">System.out.println(); <span class="comment">//换行</span></span><br></pre></td></tr></table></figure>
 
 <p>打印时，用+号来连接内容</p>
 <p>例如：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> i=<span class="hljs-number">10</span>;<br>System.out.println(<span class="hljs-string">&quot;数字i的值为：&quot;</span>+i);<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i=<span class="number">10</span>;</span><br><span class="line">System.out.println(<span class="string">&quot;数字i的值为：&quot;</span>+i);</span><br></pre></td></tr></table></figure>
 
 <p>idea快速写打印代码：</p>
 <p>写 <strong>sout</strong> 即可</p>
@@ -920,6 +923,9 @@
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
 
 
 <!-- 代码语言 -->
