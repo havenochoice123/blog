@@ -111,7 +111,7 @@
       <link href="/2025/06/06/%E5%A2%9E%E5%8A%A0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%EF%BC%81/"/>
       <url>/2025/06/06/%E5%A2%9E%E5%8A%A0%E4%BA%86%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%EF%BC%81/</url>
       
-        <content type="html"><![CDATA[<h1 id="为博客新增了评论功能！"><a href="#为博客新增了评论功能！" class="headerlink" title="为博客新增了评论功能！"></a>为博客新增了评论功能！</h1><p>现在可以自由地在在博客下面评论了（不过需要我每天进入leancloud进行初始化），使用的是github上的<strong>Valine</strong>,具体见<a href="https://github.com/xCss/Valine">https://github.com/xCss/Valine</a><br>以前用gitment，但是登录github账号时会有问题，而且现在使用gitment的网站也有相同的问题。今天在读某篇博客时，意外看到了它的评论区，于是顺藤摸瓜找到了Valine。  </p>]]></content>
+        <content type="html"><![CDATA[<h1 id="为博客新增了评论功能！"><a href="#为博客新增了评论功能！" class="headerlink" title="为博客新增了评论功能！"></a>为博客新增了评论功能！</h1><p>现在可以自由地在在博客下面评论了（不过需要我每天进入leancloud进行初始化），使用的是github上的<strong>Valine</strong>,具体见<a href="https://github.com/xCss/Valine">https://github.com/xCss/Valine</a><br>以前用gitment，但是登录github账号时会有问题，而且现在使用gitment的网站也有相同的问题。今天在读某篇博客时，意外看到了它的评论区，于是顺藤摸瓜找到了Valine。<br><em>注意</em>：手机端评论无法正常显示，但是可以发送</p>]]></content>
       
       
       
