@@ -4,13 +4,18 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="打印, blog">
-    <meta name="description" content="因为有C语言和C++的一点基础，所以Java中有相似的都不再列出，只做Java中一些不同的写法和新的内容  
-打印打印代码：
-System.out.print();   //不换行
-System.out.println(); //换行
+    <meta name="keywords" content="循环结构, blog">
+    <meta name="description" content="循环结构
+跳出外层循环：打标签
 
-打">
+例：
+outer: for(int i=0;i&amp;lt;5;i++)
+{
+	inner: for(int j=0;j&amp;lt;3;j++)
+		{
+			if(i==j)break outer;
+		}
+}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +27,7 @@ System.out.println(); //换行
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>打印 | blog</title>
+    <title>循环结构 | blog</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/suolue.ico">
     
 
@@ -339,12 +344,12 @@ System.out.println(); //换行
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">打印</h1>
+                    <h1 class="description center-align post-title">循环结构</h1>
                 </div>
             </div>
         </div>
@@ -388,21 +393,21 @@ System.out.println(); //换行
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2025-07-22
+                    2025-07-24
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2025-07-22
+                    2025-07-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    95
+                    37
                 </div>
                 
 
@@ -432,19 +437,17 @@ System.out.println(); //换行
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>因为有C语言和C++的一点基础，所以Java中有相似的都不再列出，只做Java中一些不同的写法和新的内容  </p>
-<h2 id="打印"><a href="#打印" class="headerlink" title="打印"></a>打印</h2><p>打印代码：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">//不换行</span>
-<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//换行</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>打印时，用+号来连接内容</p>
-<p>例如：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
-<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"数字i的值为："</span><span class="token operator">+</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>idea快速写打印代码：</p>
-<p>写 <strong>sout</strong> 即可</p>
-
+                <h1 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h1><ul>
+<li>跳出外层循环：打标签</li>
+</ul>
+<p>例：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">outer<span class="token operator">:</span> <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	inner<span class="token operator">:</span> <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span><span class="token number">3</span><span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span>
+		<span class="token punctuation">{</span>
+			<span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">==</span>j<span class="token punctuation">)</span><span class="token keyword">break</span> outer<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -470,7 +473,7 @@ System.out.println(); //换行
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://monster.havenochoice.cn/2025/07/22/%E6%89%93%E5%8D%B0/">http://monster.havenochoice.cn/2025/07/22/%E6%89%93%E5%8D%B0/</a>
+                    <a href="http://monster.havenochoice.cn/2025/07/24/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">http://monster.havenochoice.cn/2025/07/24/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -830,13 +833,13 @@ System.out.println(); //换行
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2025/07/22/%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F/">
+                <a href="/2025/07/24/%E7%B1%BB/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="变量与常量">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="类">
                         
-                        <span class="card-title">变量与常量</span>
+                        <span class="card-title">类</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -847,7 +850,7 @@ System.out.println(); //换行
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2025-07-22
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-07-24
                         </span>
                         <span class="publish-author">
                             
@@ -868,6 +871,10 @@ System.out.println(); //换行
                         <span class="chip bg-color">基础</span>
                     </a>
                     
+                    <a href="/tags/%E7%B1%BB/">
+                        <span class="chip bg-color">类</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -879,13 +886,13 @@ System.out.println(); //换行
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2025/07/22/%E4%BB%8A%E5%90%8E%E7%9A%84%E5%8D%9A%E5%AE%A2/">
+                <a href="/2025/07/22/Switch%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="今后的博客">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Switch表达式">
                         
-                        <span class="card-title">今后的博客</span>
+                        <span class="card-title">Switch表达式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -909,8 +916,12 @@ System.out.println(); //换行
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9D%82%E9%A1%B9/">
-                        <span class="chip bg-color">杂项</span>
+                    <a href="/tags/JavaSE/">
+                        <span class="chip bg-color">JavaSE</span>
+                    </a>
+                    
+                    <a href="/tags/Switch%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                        <span class="chip bg-color">Switch表达式</span>
                     </a>
                     
                 </div>
