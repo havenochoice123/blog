@@ -446,19 +446,11 @@ public class Person
 <span class="token punctuation">{</span>
 	<span class="token class-name">String</span> name<span class="token punctuation">;</span>   <span class="token comment">//String大写</span>
 	<span class="token keyword">int</span> age<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>    <span class="token comment">//注意结尾没有分号</span>
-```  
+<span class="token punctuation">}</span>    <span class="token comment">//注意结尾没有分号</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-## 使用类
-
-### 创建
-
-使用<span class="token operator">*</span><span class="token operator">*</span><span class="token keyword">new</span><span class="token operator">*</span><span class="token operator">*</span>来创建类的对象，类似于<span class="token class-name">C</span><span class="token operator">++</span>中为指针分配空间
-
-例如：
-
-```java
-<span class="token class-name">Person</span> p<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="使用类"><a href="#使用类" class="headerlink" title="使用类"></a>使用类</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>使用<strong>new</strong>来创建类的对象，类似于C++中为指针分配空间</p>
+<p>例如：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Person</span> p<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>此时p存放的就不是对象本身了，而是对象的引用</p>
 <p>也可以创建一个空对象：</p>
@@ -495,7 +487,7 @@ p<span class="token punctuation">.</span><span class="token function">greet</spa
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h3><p>Java类中也存在函数的重载，语法和C相同</p>
-<p>区别：<a href="%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E5%86%99%EF%BC%88%E5%A4%9A%E6%80%81%EF%BC%89%2022b5fbcff4c680438a88f05834a8b07f.md">重写</a></p>
+<p>区别：<strong>重写</strong></p>
 <h3 id="添加代码块"><a href="#添加代码块" class="headerlink" title="添加代码块"></a>添加代码块</h3><p>在类定义中添加一个代码块，此时块中的代码会在构造对象时执行一次</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">{</span>
     <span class="token class-name">String</span> name<span class="token punctuation">;</span>
@@ -503,15 +495,10 @@ p<span class="token punctuation">.</span><span class="token function">greet</spa
     <span class="token punctuation">{</span>
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>"我是代码块“<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-```  
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-## 构造方法
-
-每个类在定义时都隐含着一个默认的构造方法（构造器），其形式为：
-
-```java
-<span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><p>每个类在定义时都隐含着一个默认的构造方法（构造器），其形式为：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>无返回值，函数名与类名相同</p>
 <p>可以自己显式地定义构造方法，此时默认构造方法会被覆盖掉。</p>
@@ -581,17 +568,11 @@ p<span class="token punctuation">.</span><span class="token function">greet</spa
 			instance<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 		<span class="token keyword">return</span> instance<span class="token punctuation">;</span>
 	<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-```  
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-## <span class="token class-name">Object</span>类
-
-<span class="token operator">*</span><span class="token operator">*</span>所有的类都继承于<span class="token class-name">Object</span>类<span class="token operator">*</span><span class="token operator">*</span>，因此所有的类中都包含<span class="token class-name">Object</span>类中的方法
-
-其内容包括：
-
-```java
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Object</span> <span class="token punctuation">{</span>
+<h2 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h2><p><strong>所有的类都继承于Object类</strong>，因此所有的类中都包含Object类中的方法</p>
+<p>其内容包括：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Object</span> <span class="token punctuation">{</span>
 
     <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">native</span> <span class="token keyword">void</span> <span class="token function">registerNatives</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">//标记为native的方法是本地方法，底层是由C++实现的</span>
     <span class="token keyword">static</span> <span class="token punctuation">{</span>
@@ -641,7 +622,7 @@ p<span class="token punctuation">.</span><span class="token function">greet</spa
 
     <span class="token comment">//当对象被判定为已经不再使用的“垃圾”时，在回收之前，会由JVM来调用一次此方法进行资源释放之类的操作，这同样不是SE中需要学习的内容，这个方法我们会在JVM篇视频教程中详细介绍，目前暂时不会用到</span>
     <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">finalize</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Throwable</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>注：</p>
 <ul>
@@ -804,7 +785,7 @@ person<span class="token punctuation">.</span><span class="token function">hello
 <li>char     →    Charater</li>
 <li>boolean→  Boolean</li>
 </ul>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h4><p>与对象的创建相同</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="创建-1"><a href="#创建-1" class="headerlink" title="创建"></a>创建</h4><p>与对象的创建相同</p>
 <p>这里以Integer为例：</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Integer</span> i <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Integer</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -875,7 +856,7 @@ person<span class="token punctuation">.</span><span class="token function">hello
 ```java
 <span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>math<span class="token punctuation">.</span></span><span class="token class-name">BigInteger</span></span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="创建-1"><a href="#创建-1" class="headerlink" title="创建"></a>创建</h4><p>不能通过 <code>new</code> 创建了，而要通过 <code>.valueOf(值)</code> 创建：</p>
+<h4 id="创建-2"><a href="#创建-2" class="headerlink" title="创建"></a>创建</h4><p>不能通过 <code>new</code> 创建了，而要通过 <code>.valueOf(值)</code> 创建：</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">BigInteger</span> i <span class="token operator">=</span> <span class="token class-name">BigInteger</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h4 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">BigInteger</span> i <span class="token operator">=</span> <span class="token class-name">BigInteger</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -884,7 +865,7 @@ i <span class="token operator">=</span> i<span class="token punctuation">.</span
 <h3 id="BigDecimal"><a href="#BigDecimal" class="headerlink" title="BigDecimal"></a>BigDecimal</h3><p>可以用于<strong>小数的精确计算</strong></p>
 <h4 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>math<span class="token punctuation">.</span></span><span class="token class-name">BigDecimal</span></span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h4 id="创建-2"><a href="#创建-2" class="headerlink" title="创建"></a>创建</h4><p>同上</p>
+<h4 id="创建-3"><a href="#创建-3" class="headerlink" title="创建"></a>创建</h4><p>同上</p>
 <h4 id="运算-1"><a href="#运算-1" class="headerlink" title="运算"></a>运算</h4><p>以除法为例：</p>
 <pre><code class="language-java">BigDecimal d = BigDecimal.valueOf(10);
 d = d.divide(BigDecimal.valueOf(3),100,RoundingMode.FLOOR);
