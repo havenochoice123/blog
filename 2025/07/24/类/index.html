@@ -683,62 +683,32 @@ person<span class="token punctuation">.</span><span class="token function">hello
 		<span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"重写后的方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-```  
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-## 类的多态
-
-多态就是同类型的对象，表现出了不同的形态
-
-表现形式：父类类型 对象名称 <span class="token operator">=</span> 子类对象；
-
-### 前提
-
-<span class="token operator">-</span> 有继承关系
-<span class="token operator">-</span> 有父类引用指向子类对象（ `<span class="token class-name">Fu</span> f <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Zi</span><span class="token punctuation">(</span><span class="token punctuation">)</span>` ）
-<span class="token operator">-</span> 有方法重写
-
-### 调用
-
-#### 成员变量
-
-编译看左边，运行也看左边
-
-编译时判断父类中是否有该成员变量，运行时打印的也是该成员变量
-
-解释：继承时子类会把父类的成员变量都继承下来
-
-#### 成员方法
-
-编译看左边，运行看右边
-
-编译时判断父类中是否有该成员方法，运行时的是子类中的成员方法
-
-解释：如果子类对方法进行了重写，那么虚方法表中是会把父类的方法进行覆盖的
-
-### 优劣
-
-#### 优势
-
-方法中，如果使用父类类型作为参数，就可以接收所有的子类对象
-
-#### 缺点
-
-不能调用子类中的特有方法
-
-解决方案：再将父类对象强转为子类类型的对象，但是不能瞎转，如果转换为其他类型的子类就会报错，可以使用 `instance of` 先判断这个对象是否属于某个子类，再进行强制类型转换
-
-补充： `instance of` 新特性
-可以直接通过一行代码进行判断类型 <span class="token operator">+</span> 强转
-
-```java
-<span class="token class-name">Person</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h2 id="类的多态"><a href="#类的多态" class="headerlink" title="类的多态"></a>类的多态</h2><p>多态就是同类型的对象，表现出了不同的形态</p>
+<p>表现形式：父类类型 对象名称 = 子类对象；</p>
+<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><ul>
+<li>有继承关系</li>
+<li>有父类引用指向子类对象（ <code>Fu f = new Zi()</code> ）</li>
+<li>有方法重写</li>
+</ul>
+<h3 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h3><h4 id="成员变量"><a href="#成员变量" class="headerlink" title="成员变量"></a>成员变量</h4><p>编译看左边，运行也看左边</p>
+<p>编译时判断父类中是否有该成员变量，运行时打印的也是该成员变量</p>
+<p>解释：继承时子类会把父类的成员变量都继承下来</p>
+<h4 id="成员方法"><a href="#成员方法" class="headerlink" title="成员方法"></a>成员方法</h4><p>编译看左边，运行看右边</p>
+<p>编译时判断父类中是否有该成员方法，运行时的是子类中的成员方法</p>
+<p>解释：如果子类对方法进行了重写，那么虚方法表中是会把父类的方法进行覆盖的</p>
+<h3 id="优劣"><a href="#优劣" class="headerlink" title="优劣"></a>优劣</h3><h4 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h4><p>方法中，如果使用父类类型作为参数，就可以接收所有的子类对象</p>
+<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><p>不能调用子类中的特有方法</p>
+<p>解决方案：再将父类对象强转为子类类型的对象，但是不能瞎转，如果转换为其他类型的子类就会报错，可以使用 <code>instance of</code> 先判断这个对象是否属于某个子类，再进行强制类型转换</p>
+<p>补充： <code>instance of</code> 新特性<br>可以直接通过一行代码进行判断类型 + 强转</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Person</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">if</span><span class="token punctuation">(</span>p <span class="token keyword">instanceof</span> <span class="token class-name">Student</span> s<span class="token punctuation">)</span><span class="token punctuation">{</span>
 <span class="token comment">//直接判断p是否属于Student类型，如果属于就强转为Student</span>
 	p<span class="token punctuation">.</span><span class="token function">study</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>p <span class="token keyword">instanceof</span> <span class="token class-name">Worker</span> w<span class="token punctuation">)</span><span class="token punctuation">{</span>
 	p<span class="token punctuation">.</span><span class="token function">work</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="类中的final"><a href="#类中的final" class="headerlink" title="类中的final"></a>类中的final</h2><p>类中的final也是修饰在各种变量的前面的（但要放在访问权限后面，例如 <code>public final void test(){}</code></p>
 <p>对于变量，加上final后，该变量在运行中只能被赋值一次</p>
